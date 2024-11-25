@@ -256,7 +256,7 @@
 
     $.ajax({
         type: 'GET',
-        url: 'http://localhost/prueba_programacion/public/obtener_solicitudes',
+        url: 'https://bere2.prueba-testing.com/prueba_programacion/public/obtener_solicitudes',
         data: data,
         success: function(response) {
             $('#resultados tbody').empty();
