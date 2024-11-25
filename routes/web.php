@@ -15,12 +15,10 @@ use  App\Http\Controllers\ReservaController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 //Ruta GET para obtener datos de actividades
-Route::get('/actividades', [ActividadesController::class, 'index']);
+Route::get('/', [ActividadesController::class, 'index']);
 Route::get('/obtener_solicitudes', [ActividadesController::class, 'obtener_solicitudes']);
 Route::get('/obtener_actividad_detalle/{id}', [ActividadesController::class, 'obtenerDetalles']);
 
