@@ -16,15 +16,15 @@ use  App\Http\Controllers\ReservaController;
 */
 
 
+// Ruta GET para obtener datos de actividades
+Route::get('/', [ActividadesController::class, 'index'])->name('actividades.index');
+Route::get('/obtener_solicitudes', [ActividadesController::class, 'obtener_solicitudes'])->name('obtener_solicitudes');
+Route::get('/obtener_actividad_detalle/{id}', [ActividadesController::class, 'obtenerDetalles'])->name('obtener_actividad_detalle');
 
-//Ruta GET para obtener datos de actividades
-Route::get('/fd', [ActividadesController::class, 'index']);
-Route::get('/', [ActividadesController::class, 'obtener_solicitudes']);
-Route::get('/obtener_actividad_detalle/{id}', [ActividadesController::class, 'obtenerDetalles']);
+// Ruta para guardar datos de reservas
+Route::post('/reservas', [ReservaController::class, 'guardar_reservas'])->name('reservas');
 
-//Ruta para guardar datos de reservas
-Route::post('/reservas', [ReservaController::class, 'guardar_reservas']);
-
-Route::get('/actividades/{id}', [ActividadController::class, 'show'])->name('actividades.show');
+// Ruta para mostrar detalles de una actividad específica
+Route::get('/actividades/{id}', [ActividadController::class, 'show'])->name('show');
 
 
