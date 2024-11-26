@@ -18,8 +18,8 @@ use  App\Http\Controllers\ReservaController;
 
 
 //Ruta GET para obtener datos de actividades
-Route::get('/', [ActividadesController::class, 'index']);
-Route::get('/obtener_solicitudes', [ActividadesController::class, 'obtener_solicitudes']);
+Route::get('/fd', [ActividadesController::class, 'index']);
+Route::get('/', [ActividadesController::class, 'obtener_solicitudes']);
 Route::get('/obtener_actividad_detalle/{id}', [ActividadesController::class, 'obtenerDetalles']);
 
 //Ruta para guardar datos de reservas
