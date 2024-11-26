@@ -256,7 +256,7 @@
 
     $.ajax({
         type: 'GET',
-        url: 'https://bere2.prueba-testing.com/prueba_programacion/public/obtener_solicitudes',
+        url: '{{ url('/obtener_solicitudes') }}',
         data: data,
         success: function(response) {
             $('#resultados tbody').empty();
@@ -367,7 +367,7 @@
 
         $.ajax({
             type: 'POST',
-            url: 'http://localhost/prueba_programacion/public/reservas',
+            url: '{{ url('/reservas') }}',
             data: data,
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
